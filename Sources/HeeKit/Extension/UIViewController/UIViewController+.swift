@@ -9,6 +9,14 @@ extension UIViewController {
         viewController.didMove(toParent: self)
     }
     
+    public func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc
+    func dismissKeyboard() { view.endEditing(true) }
+    
     @available(iOS 10.0, *)
     public func makeRequestAlert(title : String,
                                  message : String,
