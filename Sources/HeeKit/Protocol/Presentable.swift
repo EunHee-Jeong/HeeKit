@@ -1,6 +1,6 @@
 import UIKit
 
 public protocol Presentable {
-    func setupView() { }
-    func setupConstraint() { }
+    func setupView()
+    func setupConstraint()
 }
