@@ -51,3 +51,19 @@ extension UIView {
         set { layer.borderWidth = newValue }
     }
 }
+
+public class BaseView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+        setupConstraints()
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    func setupView() {}
+    func setupConstraints() {}
+}
