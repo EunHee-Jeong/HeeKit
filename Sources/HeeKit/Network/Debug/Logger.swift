@@ -31,7 +31,7 @@ public class Log {
         #endif
     }
     
-    class func event(type: LogEvent, _ object: Any, filename: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
+    public class func event(type: LogEvent, _ object: Any, filename: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
         if isLoggingEnabled {
             var eventPrefix = ""
             switch type {
