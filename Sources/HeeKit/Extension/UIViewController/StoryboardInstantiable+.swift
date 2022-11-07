@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension StoryboardInstantiable where Self: UIViewController {
     static var defaultFileName: String {
